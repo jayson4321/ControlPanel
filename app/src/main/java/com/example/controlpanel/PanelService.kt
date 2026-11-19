@@ -140,6 +140,7 @@ class PanelService : Service() {
     private fun addStrip() {
         if (strip != null) return
         val v = View(this)
+        v.setBackgroundColor(0x55FF0000)
         var downY = 0f
         var fired = false
         v.setOnTouchListener { _, e ->
@@ -152,7 +153,7 @@ class PanelService : Service() {
             }
             true
         }
-        val lp = WLP(MP, dp(28), WLP.TYPE_APPLICATION_OVERLAY, FLAGS, PixelFormat.TRANSLUCENT)
+        val lp = WLP(MP, dp(120), WLP.TYPE_APPLICATION_OVERLAY, FLAGS, PixelFormat.TRANSLUCENT)
         lp.gravity = Gravity.TOP
         wm.addView(v, lp)
         strip = v
