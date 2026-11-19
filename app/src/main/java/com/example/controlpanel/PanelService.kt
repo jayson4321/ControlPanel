@@ -152,7 +152,7 @@ class PanelService : Service() {
             }
             true
         }
-        val lp = WLP(MP, dp(30), WLP.TYPE_APPLICATION_OVERLAY, FLAGS, PixelFormat.TRANSLUCENT)
+        val lp = WLP(MP, dp(35), WLP.TYPE_APPLICATION_OVERLAY, FLAGS, PixelFormat.TRANSLUCENT)
         lp.gravity = Gravity.TOP
         wm.addView(v, lp)
         strip = v
